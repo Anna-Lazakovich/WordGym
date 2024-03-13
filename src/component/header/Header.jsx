@@ -1,9 +1,10 @@
-import './Header.css';
+import './Header.module.css';
 
 function Header() {
   return (
     <header>
-      <h1>Study Stuck</h1>        
+      <h1>Study Stuck</h1>
+             
     </header>
   );
 }

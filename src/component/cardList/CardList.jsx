@@ -1,13 +1,12 @@
-import './CardList.css';
+import './CardList.module.css';
 import React from 'react';
 import Card from '../card/Card'
+import words from '../words.json';
 
-function CardList(props) {
+function CardList() {
     return (
-      <div>
-        <Card title='make' description='делать' />
-        <Card title='meet' description='встречать' />
-        <Card title='cut' description='резать' />
+      <div className='container'>
+        {words.map(Card)}
       </div>
     );
   }

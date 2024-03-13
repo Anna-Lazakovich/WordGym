@@ -1,0 +1,8 @@
+.button {
+  display: inline-block;
+  background-color: orange;
+  border: none;
+  border-radius: 10%;
+  width: 2.25rem;
+  height: 1.5rem;
+}
