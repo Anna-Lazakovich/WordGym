@@ -1,13 +1,15 @@
 import './App.css';
-import Header from '../src/component/header/Header';
-import CardList from '../src/component/cardList/CardList'
-import Footer from '../src/component/footer/Footer';
+import Header from './component/header/Header';
+// import ListOfWords from './component/listOfWords/ListOfWords'
+import Footer from './component/footer/Footer';
+import SetOfCard from './component/setOfCard/SetOfCard';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <CardList />
+      {/* <ListOfWords /> */}
+      <SetOfCard />
       <Footer />     
     </div>
   );

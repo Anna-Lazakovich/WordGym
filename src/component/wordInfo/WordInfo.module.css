@@ -1,0 +1,21 @@
+.card {
+  border: 1px solid rgb(162, 178, 171);
+  margin: 2px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.english,
+.transcription, 
+.russian {
+  margin: 2px;
+}
+
+.english {
+  font-weight: 700;
+}
+
+.card__body {
+  background-color: rgb(16, 104, 66, 0.5);
+}
+

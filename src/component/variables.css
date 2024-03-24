@@ -1,0 +1,20 @@
+@value primaryText: #0c77f8;
+@value background-main: #ff0000;
+
+@value background-buttonEdit: orange;
+@value background-buttonShowTranslation: rgb(83, 182, 137);
+@value text-translation: rgb(83, 182, 137);
+
+@value background-cardForm: rgb(197, 197, 197);
+@value border-cardForm: rgb(119, 119, 119);
+
+
+
+
+main {
+    color: rgb(0, 0, 0);
+    color: rgb(119, 119, 119);
+    color: rgb(197, 197, 197);
+    color: rgb(83, 182, 137);
+    
+}

@@ -1,0 +1,13 @@
+@value colors: "../variables.css";
+@value background-buttonShowTranslation from colors;
+
+
+.button {
+  width: min-content;
+  background-color: background-buttonShowTranslation;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}

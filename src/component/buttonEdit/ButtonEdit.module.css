@@ -1,8 +1,11 @@
+@value colors: "../variables.css";
+@value customBlue, customRed, customGreen, background-buttonEdit from colors;
+
 .button {
   display: inline-block;
-  background-color: orange;
+  background-color: background-buttonEdit;
   border: none;
   border-radius: 10%;
-  width: 2.25rem;
-  height: 1.5rem;
+  width: min-content;
+  height: min-content;
 }
