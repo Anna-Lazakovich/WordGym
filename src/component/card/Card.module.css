@@ -1,5 +1,5 @@
 @value colors: "../variables.css";
-@value border-cardForm, background-cardForm, text-translation from colors;
+@value border-card, background-card, text-translation from colors;
 
 .card {
   width: max-content;
@@ -9,8 +9,8 @@
   border-radius: 10px;
   margin: 10px;
   padding: 15px;
-  border: 2px solid border-cardForm;
-  background-color: background-cardForm;
+  border: 2px solid border-card;
+  background-color: background-card;
 }
 
 .english{

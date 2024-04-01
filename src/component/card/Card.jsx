@@ -17,10 +17,10 @@ function Card(props) {
     }
 
     return (
-    <div className={`${ styles.card }`} key={id}>
-      <div className={`${ styles.english }`}>{english}</div>       
-      <div className={`${ styles.transcription }`}>{transcription}</div>
-      <div className={`${styles.translation}`}>{translation}</div>
+      <div className={`${ styles.card }`} key={id}>
+        <div className={`${ styles.english }`}>{english}</div>       
+        <div className={`${ styles.transcription }`}>{transcription}</div>
+        <div className={`${styles.translation}`}>{translation}</div>
       </div>
     );
 }
