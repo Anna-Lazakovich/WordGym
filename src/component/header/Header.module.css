@@ -1,0 +1,9 @@
+@value colors: "../variables.css";
+@value primaryText, background-main, border-card from colors;
+
+/* .header {
+    position:sticky;
+    top: 0;
+    width: 100%;
+    background-color: background-main;
+} */

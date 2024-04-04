@@ -1,0 +1,40 @@
+@value colors: "../variables.css";
+@value primaryText, background-main, border-card from colors;
+
+
+.menu {
+  width: 100%;
+  min-height: 6vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: background-main;
+  margin-left: 10%;
+
+  position:sticky;
+  top: 0;
+  width: 100%;
+  background-color: background-main;
+}
+
+.logo {
+  width: 50px;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: primaryText;
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: dashed;
+  color: border-card;
+}

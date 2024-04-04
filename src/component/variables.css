@@ -1,5 +1,5 @@
-@value primaryText: #0c77f8;
-@value background-main: #ff0000;
+@value primaryText: black;
+@value background-main: white;
 
 @value background-buttonEdit: orange;
 @value background-buttonShowTranslation: rgb(83, 182, 137);
@@ -17,5 +17,5 @@ main {
     color: rgb(119, 119, 119);
     color: rgb(197, 197, 197);
     color: rgb(83, 182, 137);
-    
+
 }

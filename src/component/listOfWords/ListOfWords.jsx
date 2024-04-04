@@ -1,12 +1,13 @@
 import './ListOfWords.module.css';
 import React from 'react';
 import WordInfo from '../wordInfo/WordInfo'
-import words from '../words.json';
+import wordsData from '../words.json';
+const englishWords = wordsData.englishWords;
 
 function ListOfWords() {
     return (
       <div className='container'>
-        {words.map((props) => 
+        {englishWords.map((props) => 
         <WordInfo key={props.id} {...props} />)}
       </div>
     );
