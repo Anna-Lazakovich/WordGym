@@ -1,11 +1,10 @@
 import styles from './ButtonShowTranslation.module.css';
+import React, { forwardRef } from 'react';
 
-function ButtonShowTranslation (props) {
-  const {onClick} = props;
-
-  return (
-    <button className={`${ styles.button }`} onClick={onClick}>Перевод</button>
-    );
-  };
-  
-  export default ButtonShowTranslation;
+const ButtonShowTranslation = forwardRef((props) => (
+  <button className={`${ styles.button }`} 
+    onClick={() => props.onClick()} 
+    buttonRef={props.buttonRef}>Перевод</button>
+    ));
+    
+export default ButtonShowTranslation;
