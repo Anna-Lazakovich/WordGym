@@ -7,9 +7,9 @@ function Card(props) {
     const [showTranslation, setShowTranslation] = useState(false);
     const buttonRef = useRef();
     
-    useEffect(() => {
-      buttonRef.current.focus()
-    }, []);
+    // useEffect(() => {
+    //   buttonRef.current.focus()
+    // }, []);
 
     const handleShowTranslation = (count) => {
       setShowTranslation(!showTranslation);
