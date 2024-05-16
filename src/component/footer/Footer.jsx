@@ -2,8 +2,9 @@ import './Footer.module.css';
 
 function Footer() {
     return (
-      <footer>
-        Copyright © 2024 StudyStack LLC.  All rights reserved.     
+      <footer className='footer'>
+        <br />
+        Copyright © 2024 StudyStack     
       </footer>
     );
   }
