@@ -15,9 +15,6 @@ function App() {
       <div className='App'>
         <Header />
         <Menu />
-        {/* <ListOfWords />
-        <ListOfWords />
-        <ListOfWords /> */}
         <Routes>
           <Route path="/main" element={<ListOfWords />} />
           <Route path="/game" element={<SetOfCard />} />

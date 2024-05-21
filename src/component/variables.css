@@ -1,21 +1,22 @@
 @value primaryText: black;
 @value background-main: white;
 
-@value background-buttonEdit: orange;
+@value background-buttonEdit: rgb(233, 184, 69);
+@value background-buttonDel: rgb(255, 118, 97);
+@value background-buttonAdd: rgb(78, 163, 94);
+
 @value background-buttonShowTranslation: rgb(83, 182, 137);
 @value text-translation: rgb(83, 182, 137);
 
 @value background-card: rgb(197, 197, 197);
 @value border-card: rgb(119, 119, 119);
 
-
-
-
-
 main {
-    color: rgb(0, 0, 0);
-    color: rgb(119, 119, 119);
-    color: rgb(197, 197, 197);
-    color: rgb(83, 182, 137);
-
+  color: rgb(0, 0, 0);
+  color: rgb(119, 119, 119);
+  color: rgb(197, 197, 197);
+  color: rgb(83, 182, 137);
+  color: rgb(255, 118, 97);
+  color: rgb(78, 163, 94);
+  color: rgb(233, 184, 69);  
 }

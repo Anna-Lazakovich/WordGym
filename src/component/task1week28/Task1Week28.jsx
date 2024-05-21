@@ -13,15 +13,15 @@ const handleClick = (e) => {
 
   return (
     <form className={styles.form}>
-    <input
-    type='text'
-    required
-    value={text}
-    onChange={(e) => setText(e.target.value)}
-    />
-    <button onClick={handleClick}>Отправить
-    </button>
-    <p>{result}</p>
+      <input
+      type='text'
+      required
+      value={text}
+      onChange={(e) => setText(e.target.value)}
+      />
+      <button onClick={handleClick}>Отправить
+      </button>
+      <p>{result}</p>
     </form>
   );
 }

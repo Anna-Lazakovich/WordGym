@@ -2,10 +2,11 @@
 @value border-card, background-card, text-translation from colors;
 
 .card {
-  width: max-content;
+  /* width: max-content; */
   min-width: 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 10px;
   margin: 10px;
   padding: 15px;
@@ -13,9 +14,7 @@
   background-color: background-card;
 }
 
-.english{
-  width: 100%;
-  height: 100%;  
+.english {
   font-weight: 700;
   font-size: 1.5rem;
   padding: 50% 0 0;
@@ -23,7 +22,6 @@
 }
 
 .translation {
-  width: 100%;
   height: 20px;
   padding: 30% 0;
 }

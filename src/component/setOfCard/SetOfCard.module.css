@@ -7,16 +7,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .button {
-  height: 20px;
-  border: none;
   background-color: background-card;
 }
 
 .index {
   width: 100%;
+  text-align: center;
   margin: auto;
 }
 

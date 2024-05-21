@@ -1,3 +1,33 @@
-.container {
-  margin: 10%;
+@value colors: "../variables.css";
+@value background-buttonAdd, background-buttonEdit, background-buttonDel from colors;
+
+
+.table {
+  margin: auto;
+  /* text-align: center; */
+  /* border: 3px solid #E73134 */
+}
+
+.line {
+  border: 1px solid red; /*не работает */
+}
+
+button {
+  border: none;
+  margin: 5px;
+  padding: 3px 10px;
+  border-radius: 7%;
+  cursor: pointer;
+}
+
+.add, .save {
+  background-color: background-buttonAdd;
+}
+
+.edit {
+  background-color: background-buttonEdit;
+}
+
+.del, .cancel {
+  background-color: background-buttonDel;
 }
