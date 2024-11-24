@@ -9,7 +9,7 @@
 }
 
 .line {
-  border: 1px solid red; /*не работает */
+  margin: auto;
 }
 
 button {

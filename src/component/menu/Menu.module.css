@@ -2,14 +2,14 @@
 @value primaryText, background-main, border-card from colors;
 
 .logo {
-  width: 50px;
+  width: 70px;
 }
 
 .navigation {
   display: flex;
   gap: 10px;
   align-items: center;
-
+  margin: 0 10%;
   position: sticky;
   top: 0;
   background-color: background-main;

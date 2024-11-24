@@ -1,25 +1,24 @@
 import style from "./SetOfCard.module.css";
 import { useState, React } from "react";
 import Card from "../card/Card";
-import wordsData from "../words.json";
-const englishWords = wordsData.englishWords;
+import wordsData from '../words.json';
+const words = wordsData.englishWords;
 
 function SetOfCard(props) {
   const [index, setIndex] = useState(0);
-  const { id, ...itemProps } = englishWords[index];
-  const [count, setCount] = useState(0); //Сколько слов изучено 
+  const { id, ...itemProps } = words[index];
 
   const handlePrev = () => {
     if (index > 0) {
       setIndex(index - 1);
     }
     else {
-      setIndex(englishWords.length - 1);
+      setIndex(words.length - 1);
     }
   };
 
   const handleNext = () => {
-    if (index < englishWords.length - 1) {
+    if (index < words.length - 1) {
       setIndex(index + 1);
     }
     else {
@@ -27,24 +26,21 @@ function SetOfCard(props) {
     }
   };
 
-  const handleCounter = (count) => {
-    setCount(count => count + 1); // +1 при нажатии кнопки ButtonShowTranslation в дочернем компоненте
-  }
-
   return (
     <>
       <div className={style.container}>
         <button onClick={handlePrev} className={style.button}>
           &#10094;
         </button>
-        <Card key={id} {...itemProps} onChangeCount={handleCounter} />
+
+        <Card key={id} {...itemProps} />
+
         <button onClick={handleNext} className={style.button}>
           &#10095;
         </button>
+
         <p className={style.index}>
-          {index + 1}/{englishWords.length}
-        </p>
-        <p className={style.counter}>Изучено слов: {count}/{englishWords.length}
+          {index + 1}/{words.length}
         </p>
       </div>
     </>

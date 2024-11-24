@@ -3,8 +3,8 @@
 
 .header {
   /* position:sticky;
-  top: 0;
-  width: 100%;
-  background-color: background-main; */
+  top: 0; */
+  width: 80%;
+  background-color: background-main;
   text-align: center;
 }

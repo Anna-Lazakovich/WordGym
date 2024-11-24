@@ -5,10 +5,10 @@
 @value background-buttonDel: rgb(255, 118, 97);
 @value background-buttonAdd: rgb(78, 163, 94);
 
-@value background-buttonShowTranslation: rgb(83, 182, 137);
+@value background-buttonShowTranslation: rgb(144, 205, 155);
 @value text-translation: rgb(83, 182, 137);
 
-@value background-card: rgb(197, 197, 197);
+@value background-card: rgb(245, 245, 245);
 @value border-card: rgb(119, 119, 119);
 
 main {
@@ -17,6 +17,6 @@ main {
   color: rgb(197, 197, 197);
   color: rgb(83, 182, 137);
   color: rgb(255, 118, 97);
-  color: rgb(78, 163, 94);
+  color: rgb(144, 205, 155);
   color: rgb(233, 184, 69);  
 }

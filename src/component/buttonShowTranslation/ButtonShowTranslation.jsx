@@ -1,10 +1,21 @@
 import styles from './ButtonShowTranslation.module.css';
-import React, { forwardRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const ButtonShowTranslation = forwardRef((props) => (
-  <button className={`${ styles.button }`} 
-    onClick={() => props.onClick()} 
-    buttonRef={props.buttonRef}>Перевод</button>
-    ));
-    
+const ButtonShowTranslation = (props) => {
+  const ref = useRef();
+
+  useEffect(() => {
+    if(ref.current) {
+    ref.current.focus()
+    }
+    }, []);
+
+  return (
+    <button 
+      className={styles.buttonShowTranslation} 
+      onClick={props.onClick} 
+      ref={ref}
+    >Перевод</button>
+  )
+}
 export default ButtonShowTranslation;
