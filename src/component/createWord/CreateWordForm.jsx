@@ -1,35 +1,52 @@
+import { Button } from '@mui/material'
 import styles from './CreateWordForm.module.css'
 
-const CreateWordForm = ({ english, setEnglish, transcription, setTranscription, russian, setRussian, addItem }) => {
+const CreateWordForm = ({ addWord, word, setWord, error, setError }) => {
+
+  const onChange = (e) => {
+    setWord({
+      ...word, 
+      [e.target.name]: e.target.value
+    })
+    setError(null)
+  }
 
   return (
   <form className={styles.form}>
     <input 
+      name='english'
       placeholder='English'
       required
-      value={english}
-      onChange={e => setEnglish(e.target.value)} 
+      value={word.english}
+      onChange={onChange}
+      className={error ? styles.error : ''}
     />
 
     <input 
+      name='transcription'
       placeholder='Transcription' 
       required
-      value={transcription}
-      onChange={e => setTranscription(e.target.value)} 
+      value={word.transcription}
+      onChange={onChange}
+      className={error ? styles.error : ''}
     />
 
     <input 
+      name='russian'
       placeholder='Russian'
       required 
-      value={russian}
-      onChange={e => setRussian(e.target.value)} 
+      value={word.russian}
+      onChange={onChange}
+      className={error ? styles.error : ''}
     />
 
-    <button 
+    <Button 
       className={styles.btn}
       type='submit'
-      onClick={addItem}
-    >Create</button>
+      variant={'outlined'}
+      color={'primary'}
+      onClick={addWord}
+    >+</Button>
   </form>
   )
 }

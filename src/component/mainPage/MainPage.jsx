@@ -1,63 +1,91 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CreateWordForm from '../createWord/CreateWordForm';
-import RowOfTable from '../rowOfTable/RowOfTable'
-import wordsData from '../words.json';
-const words = wordsData.englishWords;
+import {v1} from 'uuid';
+import styles from '../mainPage/MainPage.module.css'
+import EditableWord from '../editableWord/EditableWord'
+import { Box, CircularProgress } from '@mui/material';
 
-const MainPage = () => {
-  const [items, setItems] = useState(words);
-  const [isEdit, setEdit] = useState(false)
-  const [english, setEnglish] = useState('')
-  const [transcription, setTranscription] = useState('')
-  const [russian, setRussian] = useState('')
-  
-  const deleteItem = (id) => {
-    const updatedItems = items.filter((item) => item.id !== id)
-    setItems(updatedItems)
-  }
+const Words = () => {
+	const [words, setWords] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const initialValues = {
+    english: '',
+    transcription: '',
+    russian: '',
+};
+  const [inputWord, setInputWord] = useState(initialValues);
+  const isInputsNotEmpty = inputWord.english.trim() !== '' && inputWord.transcription.trim() !== '' && inputWord.russian.trim() !== ''
 
-  const addItem = (e) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch('/api/words');
+      const words = await result.json();
+      setWords(words);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  const addWord = (e) => {
     e.preventDefault()
-    const newItem = {
-      id: items[items.length - 1].id + 1, 
-      english: english, 
-      transcription: transcription, 
-      russian: russian,
-      tags: '',
-      tags_json: ''
+    if (isInputsNotEmpty) {
+      const newWord = {
+        id: v1(), 
+        ...inputWord, 
+        tags: '',
+        tags_json: ''
+      }
+      setWords([newWord, ...words])
+      setInputWord(initialValues)
+    } else {
+      setError('Fields are required')
     }
-    const updatedItems = [newItem, ...items]
-    setItems(updatedItems)
-    setEnglish('')
-    setTranscription('')
-    setRussian('')
-    console.log(english, transcription, russian)    
-  }
-
-  const handleEdit = (id) => {
-    setEdit(true);
-    console.log(isEdit, id);
   }
 
   return (
-    <>
-      <CreateWordForm 
-      english={english} setEnglish={setEnglish}
-      transcription={transcription} setTranscription={setTranscription}
-      russian={russian} setRussian={setRussian}
-      addItem={addItem}
-      />
-      <div>
-        {items.map(item => <RowOfTable 
-          key={item.id} 
-          item={item}
-          deleteItem={() => deleteItem(item.id)}
-          handleEdit={handleEdit}
-          />
-        )}
-      </div>
-    </>
+  <>
+    <div>
+      <CreateWordForm addWord={addWord} word={inputWord} setWord={setInputWord} error={error} setError={setError} />
+      {error && <div className={styles.errorMessage}>{error}</div>}
+
+      { loading ?
+      <Box sx={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}>
+        <CircularProgress />
+      </Box>
+      :
+      <table className={styles.table}>
+        <tbody>
+          {words.map(word => {
+            const removeWord = (id) => {
+              let updatedWords = words.filter(word => word.id !== id)
+              setWords(updatedWords)
+            }
+            
+            const changeWord = (wordId) => {
+              let wordToEdit = words.find(word => word.id === wordId)
+              if (wordToEdit) {
+                setWords(words);
+              }
+            }
+
+            return (
+            <EditableWord
+              key={word.id}
+              word={word} 
+              removeWord={removeWord} 
+              changeWord={changeWord}
+              initialValues/>)
+          })}
+        </tbody>
+      </table>
+      }
+    </div>
+  </>
   )
 }
 
-export default MainPage;
+export default Words;

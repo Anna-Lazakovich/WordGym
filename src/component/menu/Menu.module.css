@@ -1,17 +1,15 @@
 @value colors: "../variables.css";
 @value primaryText, background-main, border-card from colors;
 
-.logo {
-  width: 70px;
-}
-
-.navigation {
+.menu {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
-  margin: 0 10%;
+  height: 10vh;
+  /* margin: 0 5%; */
   position: sticky;
   top: 0;
+  z-index: 100;
   background-color: background-main;
 }
 

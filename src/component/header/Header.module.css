@@ -1,10 +1,8 @@
-@value colors: "../variables.css";
-@value primaryText, background-main, border-card from colors;
-
 .header {
-  /* position:sticky;
-  top: 0; */
-  width: 80%;
-  background-color: background-main;
-  text-align: center;
+  text-align: end;
+  margin: 2% 2% 0 0;
+}
+
+.logo {
+  width: 300px;
 }

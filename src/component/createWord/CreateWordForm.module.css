@@ -1,33 +1,20 @@
 .form {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 2px 10%;
 }
 
 .form input {
+  margin-right: 3px;
   padding: 5px 10px;
   outline: none;
   transition: border-color 0.4s ease;
   border: 1px solid black transparent;
-  margin: 10px 2px;
-  width: 80%;
+  width: 30%;
 }
 
 .form input:focus {
   border-color: aqua;
 }
 
-.btn {
-  padding: 6px 30px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  margin: 10px 0;
-  background-color: rgb(54, 135, 159);
-}
-
-.btn:hover {
-  cursor: pointer;
+.error {
+  border: red 1px solid;
 }
