@@ -1,12 +1,11 @@
 @value colors: "../variables.css";
-@value primaryText, background-main, border-card from colors;
+@value main, accent, background-main, border-card from colors;
 
 .menu {
   display: flex;
   gap: 30px;
   align-items: center;
   height: 10vh;
-  /* margin: 0 5%; */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -15,7 +14,10 @@
 
 .link {
   text-decoration: none;
-  color: primaryText;
+  color: main;
+  font-weight: 800;
+  font-size: 1.25rem;
+
 }
 
 .link:hover {

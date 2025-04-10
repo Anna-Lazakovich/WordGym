@@ -44,7 +44,6 @@ const CreateWordForm = ({ addWord, word, setWord, error, setError }) => {
       className={styles.btn}
       type='submit'
       variant={'outlined'}
-      color={'primary'}
       onClick={addWord}
     >+</Button>
   </form>

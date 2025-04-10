@@ -53,7 +53,7 @@ function EditableWord ({ word, removeWord, changeWord }) {
         <IconButton onClick={activateViewMode} color={'success'}>
           <Add />
         </IconButton>
-        <IconButton onClick={cancelEditMode}>
+        <IconButton onClick={cancelEditMode} className={styles.cancel}>
           <Close />
         </IconButton>
       </td>
@@ -63,10 +63,10 @@ function EditableWord ({ word, removeWord, changeWord }) {
       <td className={styles.td}>{editableWord.transcription}</td>
       <td className={styles.td}>{editableWord.russian}</td>
       <td className={styles.buttonСontainer}>
-        <IconButton onClick={activateEditMode} color='info'>
+        <IconButton onClick={activateEditMode} className={styles.edit}>
           <Edit />
         </IconButton>
-        <IconButton onClick={() => removeWord(word.id)}>
+        <IconButton onClick={() => removeWord(word.id)} className={styles.remove}>
           <Delete />
         </IconButton>
       </td>

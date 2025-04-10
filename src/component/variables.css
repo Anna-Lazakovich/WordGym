@@ -1,4 +1,6 @@
 @value primaryText: black;
+@value main: rgb(35,70,170);
+@value accent: brown;
 @value background-main: white;
 
 @value background-buttonEdit: rgb(233, 184, 69);
@@ -19,5 +21,7 @@ main {
   color: rgb(83, 182, 137);
   color: rgb(255, 118, 97);
   color: rgb(144, 205, 155);
-  color: rgb(233, 184, 69);  
+  color: rgb(233, 184, 69);
+  color: rgb(35,70,170);
+
 }
