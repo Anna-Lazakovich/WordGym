@@ -32,7 +32,8 @@ const Words = () => {
     if (isInputsNotEmpty) {
       const newWord = {
         id: v1(), 
-        ...inputWord, 
+        ...inputWord,
+        transcription: `[${inputWord.transcription}]`,
         tags: '',
         tags_json: ''
       }
@@ -57,7 +58,7 @@ const Words = () => {
         <CircularProgress />
       </Box>
       :
-      <table className={styles.table}>
+      <table className={styles.table}>      
         <tbody>
           {words.map(word => {
             const removeWord = (id) => {
