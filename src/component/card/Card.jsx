@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Card.module.css';
 import ButtonShowTranslation from '../buttonShowTranslation/ButtonShowTranslation'
 
-const Card = ({ id, english, transcription, russian }) => {
+const Card = ({ key, english, transcription, russian }) => {
   const [showTranslation, setShowTranslation] = useState(false);
 
   const handleShowTranslation = () => {
@@ -20,7 +20,7 @@ const Card = ({ id, english, transcription, russian }) => {
   }
 
   return (
-    <div className={styles.card} key={id}>
+    <div className={styles.card} key={key}>
       <div className={styles.english}>{english}</div>       
       <div className={styles.transcription}>{transcription}</div>
       <div className={styles.translation}>{translation}</div>

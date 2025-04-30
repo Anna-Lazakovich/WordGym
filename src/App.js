@@ -2,7 +2,7 @@ import './App.css';
 import Header from './component/header/Header';
 import Menu from './component/menu/Menu';
 import MainPage from './component/mainPage/MainPage'
-// import SetOfCard from './component/setOfCard/SetOfCard';
+import Cards from './component/cards/Cards';
 import Footer from './component/footer/Footer';
 import Missing from './component/missing/Missing';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -16,7 +16,7 @@ function App() {
         <Menu />
         <Routes>
           <Route path="/main" element={<MainPage />} />
-          {/* <Route path="/game" element={<SetOfCard />} /> */}
+          <Route path="/game" element={<Cards />} />
           <Route path="*" element={<Missing />} />
         </Routes>
         <Footer />     
