@@ -41,7 +41,7 @@ const CreateWordForm = ({ addWord, word, setWord, error, setError }) => {
     />
 
     <Button 
-      className={styles.btn}
+      className={styles.button}
       type='submit'
       variant={'outlined'}
       onClick={addWord}

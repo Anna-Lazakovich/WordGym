@@ -1,7 +1,8 @@
-import style from "./Cards.module.css";
+import styles from "./Cards.module.css";
 import { useState, useEffect } from "react";
 import Card from "../card/Card";
-import { Box, CircularProgress } from '@mui/material';
+import { Box, CircularProgress, IconButton } from '@mui/material';
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 function Cards() {
   const [index, setIndex] = useState(0);
@@ -10,10 +11,16 @@ function Cards() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch('/api/words');
-      const words = await result.json();
-      setWords(words);
-      setLoading(false);
+      try {
+        const result = await fetch('/api/words');
+        if (!result.ok) throw new Error("Ошибка загрузки");
+        const words = await result.json();
+        setWords(words);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+        setLoading(false);
+      }
     };
     fetchData();
   }, []);
@@ -26,7 +33,8 @@ function Cards() {
     setIndex((prevIndex) => (prevIndex < words.length - 1 ? prevIndex + 1 : 0));
   };
 
-  if (loading) return 
+  if (loading) 
+  return 
   <Box sx={{
     display: 'flex',
     justifyContent: 'center',
@@ -35,17 +43,20 @@ function Cards() {
   </Box>
 
   return (
-      <div className={style.container}>
-        <button onClick={handlePrev} className={style.button}>&#10094;</button>
+      <div className={styles.container}>
+        <IconButton onClick={handlePrev} className={styles.button}>
+          <ChevronLeft />
+        </IconButton>
         <Card
-          key={words[index].id}
           english={words[index].english}
           transcription={words[index].transcription}
           russian={words[index].russian} 
         />
-        <button onClick={handleNext} className={style.button}>&#10095;</button>
-
-        <p className={style.index}>{index + 1}/{words.length}</p>
+        <IconButton onClick={handleNext} className={styles.button}>
+          <ChevronRight />
+        </IconButton>
+        
+        <p className={styles.index}>{index + 1}/{words.length}</p>
       </div>
   );
 }

@@ -1,6 +1,4 @@
-@value colors: "../variables.css";
-@value border-card, background-card, text-translation from colors;
-
+@import url('../variables.css');
 
 .container {
   display: flex;

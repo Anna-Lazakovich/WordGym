@@ -1,27 +1,24 @@
-@value primaryText: black;
-@value main: rgb(35,70,170);
-@value accent: brown;
-@value background-main: white;
+:root {
+  --primary-color: rgb(35,70,170);
+  --secondary-color: rgb(90, 90, 90);
+  --accent-color: brown;
+  
+  /* --background-menu: white; */
+  /* --border-card: rgb(119, 119, 119); */
+  --card-shadow: rgba(0, 0, 0, 0.2);
 
-@value background-buttonEdit: rgb(233, 184, 69);
-@value background-buttonDel: rgb(255, 118, 97);
-@value background-buttonAdd: rgb(78, 163, 94);
-@value background-buttonSave: rgb(144, 205, 155);
+  --primary-text: rgb(0, 0, 0); /* Основной цвет текста */
+  /* --secondary-text: rgb(90, 90, 90); Дополнительный цвет */
+  /* --accent-text: red; Цвет для выделений */
 
-@value background-buttonShowTranslation: rgb(144, 205, 155);
-@value text-translation: rgb(83, 182, 137);
+  --background-main: white; /* Основной фон */
+  --background-secondary: rgb(245, 245, 245); /*Вторичный фон*/
+  /* --background-dark: #1a1a1a; Тёмный фон */
 
-@value background-card: rgb(245, 245, 245);
-@value border-card: rgb(119, 119, 119);
+  /* --button-bg: #3498db; Фон кнопки */
+  /* --button-hover-bg: #2980b9; Фон при наведении */
+  /* --button-text: #ffffff; Цвет текста */
 
-main {
-  color: rgb(0, 0, 0);
-  color: rgb(119, 119, 119);
-  color: rgb(197, 197, 197);
-  color: rgb(83, 182, 137);
-  color: rgb(255, 118, 97);
-  color: rgb(144, 205, 155);
-  color: rgb(233, 184, 69);
-  color: rgb(35,70,170);
-
+  /* --background-buttonShowTranslation: rgb(144, 205, 155); */
+  /* --text-translation: rgb(83, 182, 137); */
 }

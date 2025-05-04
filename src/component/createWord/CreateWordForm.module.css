@@ -1,5 +1,4 @@
-@value colors: "../variables.css";
-@value accent, main from colors;
+@import url('../variables.css');
 
 .form {
   display: flex;
@@ -9,19 +8,20 @@
   margin-right: 3px;
   padding: 5px 10px;
   outline: none;
-  transition: border-color 0.4s ease;
-  border: 1px solid black transparent;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
   width: 30%;
 }
 
 .form input:focus {
-  border-color: aqua;
+  border-color: var(--primary-color);
 }
 
 .error {
-  border: accent 1px solid;
+  border: 1px solid var(--accent-color);
 }
 
-.btn {
-  color: main;
+.button {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
