@@ -1,0 +1,26 @@
+@import url('../variables.css');
+
+.missingPage {
+  color: var(--secondary-text);
+}
+
+.donut {
+  width: 200px;
+}
+
+.h1 {
+  font-size: 3em;
+  font-weight: 500;
+  margin: auto;
+}
+
+.missing {
+  font-size: 12em;
+  color: var(--secondary-text);
+  margin: auto;
+}
+
+.missingText {
+  margin: auto;
+}
+
