@@ -3,6 +3,11 @@
   flex-direction: column;
   justify-content: center;
   width: 80vw;
-  margin-left: 10%;
+  min-height: 99vh;
+  margin: 1% 0 0 10%;
+}
+
+.content {
+  flex-grow: 1;
 }
 
