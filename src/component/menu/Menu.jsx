@@ -5,9 +5,9 @@ function Menu() {
   return (
     <>
       <nav className={style.menu}>
-        <Link className={style.link} to='/'></Link>
         <Link className={style.link} to='/main'>Wordlist </Link>
         <Link className={style.link} to='/game'>Practice </Link>
+        <Link className={style.link} to='/'></Link>
       </nav>
     </>
   );

@@ -14,12 +14,15 @@ function App() {
       <div className='App'>
         <Header />
         <Menu />
-        <Routes>
-          <Route path="/main" element={<MainPage />} />
-          <Route path="/game" element={<Cards />} />
-          <Route path="*" element={<Missing />} />
-        </Routes>
-        <Footer />     
+          <div className='content'>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/main" element={<MainPage />} />
+              <Route path="/game" element={<Cards />} />
+              <Route path="*" element={<Missing />} />
+            </Routes>
+          </div>
+        <Footer />
       </div>
     </Router>
   );
