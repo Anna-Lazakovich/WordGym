@@ -18,13 +18,22 @@ const Words = () => {
   const isInputsNotEmpty = inputWord.english.trim() !== '' && inputWord.transcription.trim() !== '' && inputWord.russian.trim() !== ''
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch('/api/words');
-      const words = await result.json();
-      setWords(words);
-      setLoading(false);
-    };
-    fetchData();
+    fetch('/api/words')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Ошибка: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    })
+      .then((words) => {
+        setWords(words); 
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке данных:', error);
+        setError(error);
+        setLoading(false);
+      });
   }, []);
 
   const addWord = (e) => {
