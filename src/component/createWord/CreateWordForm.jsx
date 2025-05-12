@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import styles from './CreateWordForm.module.css'
+import React, { useEffect, useRef } from 'react'
 
 const CreateWordForm = ({ addWord, word, setWord, error, setError }) => {
 
@@ -11,6 +12,9 @@ const CreateWordForm = ({ addWord, word, setWord, error, setError }) => {
     setError(null)
   }
 
+  const ref = useRef();
+  useEffect(() => ref.current.focus(), [word.english])
+
   return (
   <form className={styles.form}>
     <input 
@@ -19,6 +23,7 @@ const CreateWordForm = ({ addWord, word, setWord, error, setError }) => {
       required
       value={word.english}
       onChange={onChange}
+      ref={ref}
       className={error ? styles.error : ''}
     />
 
