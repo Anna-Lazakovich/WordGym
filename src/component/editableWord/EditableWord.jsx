@@ -1,56 +1,60 @@
 import { IconButton } from '@mui/material';
 import styles from './EditableWord.module.css';
-import { React, useState } from 'react';
+import { React, useState, useContext } from 'react';
 import { Delete, Edit, Add, Close } from '@mui/icons-material';
+import { observer } from 'mobx-react';
+import {WordsStoreContext} from '../../stores/WordsStore';
 
-function EditableWord ({ word, removeWord, changeWord }) {
-  const [editMode, setEditMode] = useState(false)
-  const [editableWord, setEditableWord] = useState(word)
+const EditableWord = observer (({ word }) => {
+  const store = useContext(WordsStoreContext);
+  const [editMode, setEditMode] = useState(false);
 
   const activateEditMode = () => {
     setEditMode(true);
-    setEditableWord(editableWord);
   }
 
-  const activateViewMode = () => {
-    setEditMode(false)
-    changeWord(editableWord)
+  const saveChanges = () => {
+    setEditMode(false);
+    store.updateWord(word);
   }
 
   const cancelEditMode = () => {
-    setEditMode(false)
-    setEditableWord(word);    
+    setEditMode(false);   
   }
 
-  const onChangeWordHandler = (e) => {
-    setEditableWord({
-      ...editableWord,
-      [e.target.name]: e.target.value,
-    })
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    word[name] = value; // MobX автоматически отследит изменения
+  };
 
-  return editMode
-  ? <tr key={word.id} className={styles.tr}>
+  return editMode ? (
+    <tr className={styles.tr}>
       <td className={styles.td}>
-        <input className={styles.input} 
-        name='english' 
-        value={editableWord.english} 
-        onChange={onChangeWordHandler} />
+        <input 
+          className={styles.input} 
+          name='english' 
+          value={word.english} 
+          onChange={handleChange}
+        />
       </td>
       <td className={styles.td}>
-        <input className={styles.input} 
-        name='transcription' 
-        value={editableWord.transcription} 
-        onChange={onChangeWordHandler} />
+        <input 
+          className={styles.input} 
+          name='transcription' 
+          value={word.transcription} 
+          onChange={handleChange}
+        />
       </td>
       <td className={styles.td}>
-        <input className={styles.input} 
-        name='russian' 
-        value={editableWord.russian} 
-        onChange={onChangeWordHandler} />
+        <input 
+          className={styles.input} 
+          name='russian' 
+          value={word.russian} 
+          onChange={handleChange}
+        />
       </td>
       <td className={styles.buttonСontainer}>
-        <IconButton onClick={activateViewMode} color={'success'}>
+        <IconButton onClick={saveChanges} color={'success'}>
           <Add />
         </IconButton>
         <IconButton onClick={cancelEditMode} className={styles.cancel}>
@@ -58,19 +62,21 @@ function EditableWord ({ word, removeWord, changeWord }) {
         </IconButton>
       </td>
     </tr>
-  : <tr key={word.id} className={styles.tr}>
-      <td className={`${styles.td} ${styles.english}`}>{editableWord.english}</td>
-      <td className={styles.td}>{editableWord.transcription}</td>
-      <td className={styles.td}>{editableWord.russian}</td>
+  ) : (
+    <tr className={styles.tr}>
+      <td className={`${styles.td} ${styles.english}`}>{word.english}</td>
+      <td className={styles.td}>{word.transcription}</td>
+      <td className={styles.td}>{word.russian}</td>
       <td className={styles.buttonСontainer}>
         <IconButton onClick={activateEditMode} className={styles.edit}>
           <Edit />
         </IconButton>
-        <IconButton onClick={() => removeWord(word.id)} className={styles.remove}>
+        <IconButton onClick={() => store.deleteWord(word.id)} className={styles.delete}>
           <Delete />
         </IconButton>
       </td>
     </tr>
-}
+  );
+});
 
-export default EditableWord
+export default EditableWord;

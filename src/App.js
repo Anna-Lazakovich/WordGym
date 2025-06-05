@@ -4,7 +4,7 @@ import Menu from './component/menu/Menu';
 import MainPage from './component/mainPage/MainPage'
 import Cards from './component/cards/Cards';
 import Footer from './component/footer/Footer';
-import Missing from './component/missing/Missing';
+import PageNotFound from './component/pageNotFound/PageNotFound';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 
@@ -19,7 +19,7 @@ function App() {
               <Route path="/" element={<MainPage />} />
               <Route path="/main" element={<MainPage />} />
               <Route path="/game" element={<Cards />} />
-              <Route path="*" element={<Missing />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
         <Footer />

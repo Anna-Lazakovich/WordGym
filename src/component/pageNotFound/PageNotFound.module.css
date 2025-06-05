@@ -1,6 +1,6 @@
 @import url('../variables.css');
 
-.missingPage {
+.pageNotFoundContainer {
   color: var(--secondary-text);
 }
 
@@ -14,13 +14,13 @@
   margin: auto;
 }
 
-.missing {
+.pageNotFound {
   font-size: 12em;
   color: var(--secondary-text);
   margin: auto;
 }
 
-.missingText {
+.pageNotFoundText {
   margin: auto;
 }
 
