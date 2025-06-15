@@ -1,5 +1,5 @@
 import logo from "../../img/WordGym.jpg";
-import style from './Header.module.css';
+import style from "./Header.module.css";
 
 function Header() {
   return (
