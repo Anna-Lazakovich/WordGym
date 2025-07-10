@@ -5,7 +5,7 @@ class WordsStore {
   words = [];
   loading = true;
   error = null;
-  baseUrl = "http://itgirlschool.justmakeit.ru";
+  baseUrl = "https://itgirlschool.justmakeit.ru";
   initialValues = {
     english: '',
     transcription: '',
