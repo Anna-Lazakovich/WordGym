@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/WordGym/static/css/main.217d55ae.css",
-    "main.js": "/WordGym/static/js/main.1dca0412.js",
+    "main.js": "/WordGym/static/js/main.176ab52a.js",
     "static/js/453.2d8a463e.chunk.js": "/WordGym/static/js/453.2d8a463e.chunk.js",
     "static/media/WordGym.jpg": "/WordGym/static/media/WordGym.d393be934b886ec4b77e.jpg",
     "static/media/donut.jpg": "/WordGym/static/media/donut.2c243f0beec6f1a551a1.jpg",
     "index.html": "/WordGym/index.html",
     "main.217d55ae.css.map": "/WordGym/static/css/main.217d55ae.css.map",
-    "main.1dca0412.js.map": "/WordGym/static/js/main.1dca0412.js.map",
+    "main.176ab52a.js.map": "/WordGym/static/js/main.176ab52a.js.map",
     "453.2d8a463e.chunk.js.map": "/WordGym/static/js/453.2d8a463e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.217d55ae.css",
-    "static/js/main.1dca0412.js"
+    "static/js/main.176ab52a.js"
   ]
 }
