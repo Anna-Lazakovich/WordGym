@@ -1,5 +1,3 @@
-@import url('../variables.css');
-
 .pageNotFoundContainer {
   color: var(--secondary-text);
 }

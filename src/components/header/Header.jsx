@@ -1,4 +1,4 @@
-import logo from "../../img/WordGym.jpg";
+import logo from "../../assets/img/WordGym2.jpg";
 import style from "./Header.module.css";
 
 function Header() {

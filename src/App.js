@@ -1,10 +1,10 @@
-import './App.css';
-import Header from './component/header/Header';
-import Menu from './component/menu/Menu';
-import MainPage from './component/mainPage/MainPage'
-import Cards from './component/cards/Cards';
-import Footer from './component/footer/Footer';
-import PageNotFound from './component/pageNotFound/PageNotFound';
+import './assets/styles/App.css';
+import Header from './components/header/Header';
+import Menu from './components/menu/Menu';
+import MainPage from './components/mainPage/MainPage'
+import Cards from './components/cards/Cards';
+import Footer from './components/footer/Footer';
+import PageNotFound from './components/pageNotFound/PageNotFound';
 import {HashRouter as Router, Routes, Route} from "react-router-dom";
 
 
