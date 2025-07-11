@@ -6,20 +6,21 @@
   margin-right: 3px;
   padding: 5px 10px;
   outline: none;
-  border: 1px solid var(--secondary-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--headline-color);
   border-radius: 4px;
   width: 30%;
 }
 
 .form input:focus {
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
 
 .error {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--tertiary-color);
 }
 
-.button {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-}
+/* .button {
+  border-color: var(--stroke-color);
+  color: var(--button-text-color);
+} */

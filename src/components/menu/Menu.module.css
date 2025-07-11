@@ -6,12 +6,12 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--background-main);
+  background-color: var(--background-color);
 }
 
 .link {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--headline-color);
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -19,5 +19,5 @@
 .link:hover {
   cursor: pointer;
   text-decoration: dashed;
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
