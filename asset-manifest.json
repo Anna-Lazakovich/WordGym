@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/WordGym/static/css/main.217d55ae.css",
-    "main.js": "/WordGym/static/js/main.176ab52a.js",
+    "main.css": "/WordGym/static/css/main.2ce9659b.css",
+    "main.js": "/WordGym/static/js/main.651c3a61.js",
     "static/js/453.2d8a463e.chunk.js": "/WordGym/static/js/453.2d8a463e.chunk.js",
-    "static/media/WordGym.jpg": "/WordGym/static/media/WordGym.d393be934b886ec4b77e.jpg",
+    "static/media/WordGym2.jpg": "/WordGym/static/media/WordGym2.12f72fc9d9692249301f.jpg",
+    "static/media/Montserrat-SemiBold.woff2": "/WordGym/static/media/Montserrat-SemiBold.76841f23a1a86cc45dda.woff2",
+    "static/media/Montserrat-Regular.woff2": "/WordGym/static/media/Montserrat-Regular.a66265ef3ec2c9bd2fe8.woff2",
     "static/media/donut.jpg": "/WordGym/static/media/donut.2c243f0beec6f1a551a1.jpg",
     "index.html": "/WordGym/index.html",
-    "main.217d55ae.css.map": "/WordGym/static/css/main.217d55ae.css.map",
-    "main.176ab52a.js.map": "/WordGym/static/js/main.176ab52a.js.map",
+    "main.2ce9659b.css.map": "/WordGym/static/css/main.2ce9659b.css.map",
+    "main.651c3a61.js.map": "/WordGym/static/js/main.651c3a61.js.map",
     "453.2d8a463e.chunk.js.map": "/WordGym/static/js/453.2d8a463e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.217d55ae.css",
-    "static/js/main.176ab52a.js"
+    "static/css/main.2ce9659b.css",
+    "static/js/main.651c3a61.js"
   ]
 }
