@@ -2,6 +2,6 @@
   height: 5vh;
   padding: 8px 0 0 0;
   text-align: center;
-  color: var(--secondary-text);
+  color: var(--paragraph-color);
   font-size: 0.8em;
 }

@@ -1,8 +1,8 @@
 .card {
-  width: 180px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  width: 200px;
+  min-height: 250px;
   align-items: center;
   border-radius: 10px;
   margin: 5%;
@@ -13,29 +13,29 @@
 .english {
   font-weight: 700;
   font-size: 1.8rem;
-  max-width: 100%;
-  padding: 10% 0;
+  min-height: 40px;
+  margin: 10% 0;
+  color: var(--headline-color);
 }
 
 .transcription {
-  max-width: 100%;
-  padding: 10% 0;
-  color: var(--secondary-color);
+  min-height: 40px;
+  color: var(--paragraph-color);
 }
 
 .translation {
-  min-height: max-content;
-  max-width: 100%;
-  padding: 10% 0;
+  min-height: 50px;
+  margin-top: 30%;
 }
 
 .russian {
   height: 40px;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .button {
   height: 40px;
-  background-color: var(--primary-color) !important;
+  color: var(--button-text-color) !important;
+  background-color: var(--button-color) !important;
 }

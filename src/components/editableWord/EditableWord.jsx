@@ -24,12 +24,12 @@ const EditableWord = observer(({ word }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    word[name] = value; // MobX автоматически отследит изменения
+    word[name] = value; // MobX автоматически отслеживает изменения
   };
 
   return editMode ? (
-    <tr className={styles.tr}>
-      <td className={styles.td}>
+    <tr className={styles.trInput}>
+      <td className={styles.tdInput}>
         <input
           className={styles.input}
           name="english"
@@ -37,7 +37,7 @@ const EditableWord = observer(({ word }) => {
           onChange={handleChange}
         />
       </td>
-      <td className={styles.td}>
+      <td className={styles.tdInput}>
         <input
           className={styles.input}
           name="transcription"
@@ -45,7 +45,7 @@ const EditableWord = observer(({ word }) => {
           onChange={handleChange}
         />
       </td>
-      <td className={styles.td}>
+      <td className={styles.tdInput}>
         <input
           className={styles.input}
           name="russian"
@@ -54,7 +54,7 @@ const EditableWord = observer(({ word }) => {
         />
       </td>
       <td className={styles.buttonСontainer}>
-        <IconButton onClick={saveChanges} color={"success"}>
+        <IconButton onClick={saveChanges} className={styles.add}>
           <Add />
         </IconButton>
         <IconButton onClick={cancelEditMode} className={styles.cancel}>

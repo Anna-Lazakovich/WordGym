@@ -1,4 +1,4 @@
-import donut from "../../assets/img/donut.jpg";
+import donut from "../../assets/img/donut2.png";
 import style from "./PageNotFound.module.css";
 
 function PageNotFound() {

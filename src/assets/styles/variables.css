@@ -1,23 +1,12 @@
 :root {
-  --primary-color: rgb(35,70,170);
-  --secondary-color: rgb(90, 90, 90);
-  /* --accent-color: brown; */
-  
-  --card-shadow: rgba(0, 0, 0, 0.2);
-
-  --primary-text: rgb(0, 0, 0); /* Основной цвет текста */
-  --secondary-text: rgb(170, 170, 170); /* Дополнительный цвет */
-
-  --background-main: white; /* Основной фон */
-  --background-secondary: rgb(245, 245, 245); /*Вторичный фон*/
-
-  /* Новые цвета */
   --background-color: rgb(242, 247, 245);
   --headline-color: rgb(0, 71, 62);
   --paragraph-color: rgb(71, 93, 91);
+  
   --button-color: rgb(250, 174, 43);
   --button-text-color: rgb(0, 71, 62);
-
+  
+  --card-shadow: rgba(0, 0, 0, 0.2);
   --stroke-color: rgb(0, 51, 44);
   --accent-color: rgb(250, 174, 43);
   --secondary-color: rgb(255, 168, 186);

@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import styles from "./CreateWordForm.module.css";
 import { v1 } from "uuid";
 import React, { useEffect, useRef } from "react";
@@ -52,7 +51,7 @@ const CreateWordForm = observer(({ inputWord, setWord, error, setError }) => {
         value={inputWord.english}
         onChange={handleChange}
         ref={ref}
-        className={error ? styles.error : ""}
+        className={error ? styles.error : styles.input}
       />
 
       <input
@@ -61,7 +60,7 @@ const CreateWordForm = observer(({ inputWord, setWord, error, setError }) => {
         required
         value={inputWord.transcription}
         onChange={handleChange}
-        className={error ? styles.error : ""}
+        className={error ? styles.error : styles.input}
       />
 
       <input
@@ -70,12 +69,12 @@ const CreateWordForm = observer(({ inputWord, setWord, error, setError }) => {
         required
         value={inputWord.russian}
         onChange={handleChange}
-        className={error ? styles.error : ""}
+        className={error ? styles.error : styles.input}
       />
 
-      <Button className={styles.button} type="submit" variant={"outlined"}>
+      <button className={styles.button} type="submit">
         +
-      </Button>
+      </button>
     </form>
   );
 });

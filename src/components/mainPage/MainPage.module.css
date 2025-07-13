@@ -1,7 +1,8 @@
 .errorMessage {
   display: flex;
   justify-content: center;
-  color: var(--accent-color)
+  color: var(--tertiary-color);
+  font-size: 0.85em;
 }
 
 .table {

@@ -1,25 +1,51 @@
 .tr {
   display: flex;
+  gap: 1%;
   justify-content: space-between;
   align-items: center;
-  margin: 5px 0;
-  background-color: var(--background-secondary);
-  border-radius: 8px;
+  margin: 3px 0;
+  color: var(--paragraph-color);
+}
+
+.tr:hover {
+  background-color: var(--accent-color);
 }
 
 .td {
-  margin: 0 0 0 1%;
   padding: 5px;
+  width: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.td:hover {
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.english {
+  font-weight: 600;
+  color: var(--stroke-color);
+}
+
+.trInput {
+  display: flex;
+  gap: 1%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tdInput {
   width: 30%;
 }
 
 .input {
   padding: 5px;
-  width: 85%;
-}
-
-.english {
-  font-weight: 600;
+  width: calc(99% - 10px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--paragraph-color);
+  font-family: 'Montserrat';
 }
 
 .buttonСontainer {
@@ -28,5 +54,13 @@
 }
 
 .delete:hover, .cancel:hover {
-  color: var(--accent-color);
+  color: var(--tertiary-color);
+}
+
+.edit:hover {
+  color: var(--stroke-color);
+}
+
+.add:hover {
+  color: var(--button-text-color);
 }

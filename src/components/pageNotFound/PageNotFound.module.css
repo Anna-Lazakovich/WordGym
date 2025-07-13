@@ -1,5 +1,5 @@
 .pageNotFoundContainer {
-  color: var(--secondary-text);
+  color: var(--paragraph-color);
 }
 
 .donut {
@@ -14,7 +14,7 @@
 
 .pageNotFound {
   font-size: 12em;
-  color: var(--secondary-text);
+  color: var(--paragraph-color);
   margin: auto;
 }
 
