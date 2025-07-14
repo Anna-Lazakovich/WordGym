@@ -1,46 +1,49 @@
-# SPA for learning english words
+# 📚 WordGym — English Vocabulary Trainer
 
-## Description
+_An interactive single-page application designed to help users train their English vocabulary._
 
-It's a single-page application, that contains:
+## 📽 Preview
 
-### `Home page`
+![WordGym Preview](src/assets/wordgym-readme.gif)
 
-with a list of words to learn. A user can update and delete current list and add new words.
+## Overview
 
-### `Training page`
+WordGym is a vocabulary training app where users can manage their personal word lists.
 
-with cards to learn each word from the main list.
+## Pages
 
-### `Error page`
+- **Main Page** — displays a list of words to learn. Users can:
+  - Add new words  
+  - Edit existing words  
+  - Delete learned words
+- **Training Page** — card-based interface for memorizing vocabulary from the word list
+- **Error Page** — shows message in case of errors
 
-with message about error and links to other actual pages.
-
-
-## Technologies
+## Technologies Used
 
 ### `React`
 
-- React single page application
-
-- Routing done using React Router
-<!-- - State management via MobX/Context -->
-<!-- - Custom hooks -->
-- Funcional components
+- Single Page Application architecture
+- Routing with React Router
+- State management via **MobX + Context API**
+- Functional components
 
 ### `CSS`
 
-- module styles
-<!-- - adaptiv: desktop, mobile (<428), tablet (<768) -->
-- flex-position
+- Module styles for scoped styling
+- Flexbox
+- Styled interactive elements (buttons, links)
 
-- interaction with users (styling of links and buttons)
+### `Material UI (MUI)`
+
+- UI components for faster development
+- Custom styling for MUI elements to match the project’s theme
 
 ### `API`
 
-- SPA uses API with words
-<!-- - GET/POST requests -->
+- Words are managed via RESTful API
 
-### `Gh-page`
+### `Deployment`
 
-<a href="https://anna-lazakovich.github.io/WordGym/" target="_blank">WordGym</a>
+- Live on GitHub Pages  
+  [Check out WordGym](https://anna-lazakovich.github.io/WordGym/)
